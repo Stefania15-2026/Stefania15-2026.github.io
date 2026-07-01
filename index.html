@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentru Denis ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blush: #fff0f3;
+    --rose: #ffe4ec;
+    --pink: #f8b4c4;
+    --deep-rose: #c44569;
+    --burgundy: #6d2b3a;
+    --gold: #d4a574;
+    --rose-gold: #b76e79;
+    --cream: #fef8f3;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--burgundy);
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #fff0f3 0%, #ffe4ec 25%, #fce4ec 50%, #fff5f7 75%, #fef8f3 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 18s ease infinite;
+    min-height: 100vh;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Floating background */
+  .floats-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .floating-item {
+    position: absolute;
+    bottom: -50px;
+    opacity: 0.5;
+    animation: floatUp linear forwards;
+    user-select: none;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-110vh) rotate(360deg) scale(1.2); opacity: 0; }
+  }
+
+  .content { position: relative; z-index: 2; }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .hero-pre {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--rose-gold);
+    margin-bottom: 0.3rem;
+    opacity: 0;
+    animation: fadeIn 1s 0.3s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 700;
+    color: var(--deep-rose);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1.2s 0.6s forwards;
+  }
+
+  .hero h1 .accent {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: var(--rose-gold);
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--burgundy);
+    opacity: 0;
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+    animation: fadeIn 1.2s 0.9s forwards;
+  }
+
+  .hero-heart-wrap {
+    opacity: 0;
+    animation: fadeIn 1s 1.2s forwards;
+  }
+
+  .heart-beat {
+    font-size: 3.5rem;
+    display: inline-block;
+    animation: beat 1.2s ease-in-out infinite;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.18); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-indicator-wrap {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+  }
+
+  .scroll-indicator {
+    color: var(--rose-gold);
+    font-size: 1.5rem;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+
+  /* Sections */
+  section {
+    padding: 5rem 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+    color: var(--deep-rose);
+    margin-bottom: 0.3rem;
+  }
+
+  .section-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--rose-gold);
+    margin-bottom: 3rem;
+  }
+
+  /* Counter */
+  .counter-section { text-align: center; }
+
+  .counter-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--rose-gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .counter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .counter-box {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1.2rem;
+    padding: 1.5rem 1rem;
+    min-width: 105px;
+    box-shadow: 0 8px 32px rgba(196, 69, 105, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .counter-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(196, 69, 105, 0.18);
+  }
+
+  .counter-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: 700;
+    color: var(--deep-rose);
+    line-height: 1;
+    transition: transform 0.15s ease;
+  }
+
+  .counter-num.bump { transform: scale(1.12); }
+
+  .counter-label-sm {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--rose-gold);
+    margin-top: 0.6rem;
+    font-weight: 500;
+  }
+
+  .counter-forever {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--rose-gold);
+    margin-top: 1rem;
+  }
+
+  /* Cifre frumoase */
+  .cifre-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .cifra-item {
+    text-align: center;
+  }
+
+  .cifra-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    font-weight: 700;
+    color: var(--deep-rose);
+    line-height: 1;
+  }
+
+  .cifra-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: var(--rose-gold);
+    margin-top: 0.5rem;
+  }
+
+  /* Poem */
+  .poem-section { text-align: center; }
+
+  .poem {
+    max-width: 620px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(196, 69, 105, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .poem h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: var(--deep-rose);
+    margin-bottom: 2rem;
+  }
+
+  .poem p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--burgundy);
+    margin-bottom: 1.3rem;
+  }
+
+  .poem .signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--rose-gold);
+    margin-top: 2rem;
+    font-style: normal;
+  }
+
+  /* Dedications */
+  .dedications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .dedication-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.2rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(196, 69, 105, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    transition: all 0.35s ease;
+  }
+
+  .dedication-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 48px rgba(196, 69, 105, 0.16);
+  }
+
+  .dedication-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .dedication-card:hover .icon {
+    transform: scale(1.2) rotate(-10deg);
+  }
+
+  .dedication-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--burgundy);
+  }
+
+  /* Love note */
+  .love-note-section { text-align: center; }
+
+  .love-note-btn {
+    background: linear-gradient(135deg, var(--deep-rose), var(--rose-gold));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(196, 69, 105, 0.3);
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+  }
+
+  .love-note-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 32px rgba(196, 69, 105, 0.42);
+  }
+
+  .love-note-btn:active { transform: scale(0.98); }
+
+  .love-note {
+    max-width: 620px;
+    margin: 2rem auto 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(196, 69, 105, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.5s ease, padding 0.5s ease;
+    padding: 0 2.5rem;
+  }
+
+  .love-note.show {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 2.5rem;
+  }
+
+  .love-note p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--burgundy);
+    margin-bottom: 1rem;
+  }
+
+  .love-note .sig {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--rose-gold);
+    margin-top: 1.5rem;
+    text-align: right;
+    font-style: normal;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 3rem 1.5rem 4rem;
+    color: var(--rose-gold);
+  }
+
+  footer .footer-heart {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    animation: beat 1.2s ease-in-out infinite;
+  }
+
+  footer p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+  }
+
+  footer .small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 0.5rem;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--pink);
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .counter { gap: 0.5rem; }
+    .counter-box { min-width: 72px; padding: 1rem 0.5rem; }
+    .counter-num { font-size: 2rem; }
+    section { padding: 3.5rem 1rem; }
+    .poem { padding: 2rem 1.2rem; }
+    .poem p { font-size: 1.05rem; line-height: 1.9; }
+    .cifre-grid { gap: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="floats-bg" id="floatsBg"></div>
+
+<div class="content">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <p class="hero-pre">Pentru tine,</p>
+    <h1>Denis <span class="accent">&amp; Stefania</span> ❤️</h1>
+    <p class="hero-sub">De când te-am întâlnit, inima mea a găsit un cămin în a ta. Acest mic colț de internet e pentru tine — pentru noi, pentru începutul nostru.</p>
+    <div class="hero-heart-wrap">
+      <span class="heart-beat">💗</span>
+    </div>
+    <div class="scroll-indicator-wrap">
+      <div class="scroll-indicator">↓</div>
+    </div>
+  </div>
+
+  <!-- ===== COUNTER ===== -->
+  <section class="counter-section reveal">
+    <h2 class="section-title">Timpul nostru împreună</h2>
+    <p class="section-subtitle">de la primul „da" al inimii</p>
+
+    <p class="counter-label">Suntem împreună de...</p>
+    <div class="counter" id="counter">
+      <div class="counter-box">
+        <div class="counter-num" id="days">0</div>
+        <div class="counter-label-sm">Zile</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-num" id="hours">00</div>
+        <div class="counter-label-sm">Ore</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-num" id="minutes">00</div>
+        <div class="counter-label-sm">Minute</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-num" id="seconds">00</div>
+        <div class="counter-label-sm">Secunde</div>
+      </div>
+    </div>
+    <p class="counter-forever">...și numărăm mai departe, la infinit ♾️</p>
+
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <!-- ===== CIFRE ===== -->
+  <section class="reveal" style="text-align:center;">
+    <h2 class="section-title">Noi în cifre</h2>
+    <p class="section-subtitle">ceea ce nu se poate măsura</p>
+
+    <div class="cifre-grid">
+      <div class="cifra-item">
+        <div class="cifra-num" id="cifraZile">0</div>
+        <div class="cifra-label">Zile</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">∞</div>
+        <div class="cifra-label">Momente</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">∞</div>
+        <div class="cifra-label">Zâmbete</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">1</div>
+        <div class="cifra-label">Noi</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <!-- ===== POEM ===== -->
+  <section class="poem-section reveal">
+    <h2 class="section-title">O poezie pentru tine</h2>
+    <p class="section-subtitle">scrisă cu inima, nu cu mintea</p>
+
+    <div class="poem">
+      <h3>Pentru Tine</h3>
+
+      <p>Te-am întâlnit și lumea mea s-a-ntors,<br>
+      Cu susul în jos, cu inima-n sus —<br>
+      Și-am simțit dintr-o dată, clar,<br>
+      Că tot ce-am așteptat... erai tu.</p>
+
+      <p>Mă gândesc la zâmbetul tău când mă privești,<br>
+      La felul cum îmi spui numele,<br>
+      La mâna ta caldă în mâna mea,<br>
+      La clipele care devin amintiri.</p>
+
+      <p>Nu mă tem de timpul care zbură,<br>
+      Nu mă tem că suntem doar la început —<br>
+      Căci inima mea a ales,<br>
+      Și a ales să te iubească, Denis.</p>
+
+      <p>Și numărăm zilele, orele, clipele,<br>
+      Le punem în suflet ca pe niște stele —<br>
+      Fiecare moment e un întreg univers,<br>
+      Cât timp inima mea te poartă pe tine.</p>
+
+      <p class="signature">— a ta, mereu 💕</p>
+    </div>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <!-- ===== DEDICATII ===== -->
+  <section class="reveal">
+    <h2 class="section-title">De ce tu, Denis</h2>
+    <p class="section-subtitle">câteva din motivele... infinite</p>
+
+    <div class="dedications-grid">
+      <div class="dedication-card">
+        <div class="icon">😊</div>
+        <p>Pentru zâmbetul tău care-mi luminează întreaga zi, chiar și când afară plouă.</p>
+      </div>
+      <div class="dedication-card">
+        <div class="icon">🤗</div>
+        <p>Pentru brațele tale în care mă simt acasă, de parcă le-aș fi căutat o viață.</p>
+      </div>
+      <div class="dedication-card">
+        <div class="icon">💬</div>
+        <p>Pentru fiecare „noapte bună" și fiecare „bună dimineața" care-mi fac inima să zâmbească.</p>
+      </div>
+      <div class="dedication-card">
+        <div class="icon">🌟</div>
+        <p>Pentru că ai devenit motivul pentru care mă trezesc cu un zâmbet, în fiecare dimineață.</p>
+      </div>
+      <div class="dedication-card">
+        <div class="icon">🤝</div>
+        <p>Pentru că mă faci să mă simt văzută, ascultată, iubită — așa cum nimeni altcineva.</p>
+      </div>
+      <div class="dedication-card">
+        <div class="icon">❤️</div>
+        <p>Pentru că ești tu. Și tu ești mai mult decât am sperat vreodată. Și abia am început.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">❀ ❀ ❀</div>
+
+  <!-- ===== MESAJ SECRET ===== -->
+  <section class="love-note-section reveal">
+    <h2 class="section-title">Un mic gând</h2>
+    <p class="section-subtitle">doar pentru tine, Denis</p>
+
+    <button class="love-note-btn" id="loveNoteBtn">Apasă aici 💌</button>
+
+    <div class="love-note" id="loveNote">
+      <p>Denis,</p>
+      <p>Nu știu dacă știi ce ai făcut de când te-am cunoscut. Mi-ai intrat în inimă pe ușa din față, ai aprins toate luminile, și ai făcut din fiecare zi ceva la care abia aștept să mă trezesc.</p>
+      <p>Sunt recunoscătoare pentru tine. Pentru răbdarea ta, pentru glumele tale, pentru felul în care mă privești. Știu că suntem la început — dar simt că acest început are ceva diferit. Ceva special.</p>
+      <p>Mulțumesc că ești tu. Mulțumesc că ești aici. Mulțumesc că ești al meu.</p>
+      <p class="sig">Cu toată inima mea 💕</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-heart">❤️</div>
+    <p>Făcut cu dragoste, pentru Denis</p>
+    <p class="small">Și numărăm... multe, multe zile înainte 🌹</p>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== Floating background (hearts + flowers) =====
+  var floatsBg = document.getElementById('floatsBg');
+  var floatChars = ['❤️', '💕', '💗', '🌸', '💞', '🌺', '💓', '🌹', '🌼', '🌷', '💮'];
+
+  function spawnFloat() {
+    var el = document.createElement('span');
+    el.className = 'floating-item';
+    el.textContent = floatChars[Math.floor(Math.random() * floatChars.length)];
+    el.style.left = Math.random() * 100 + '%';
+    el.style.fontSize = (Math.random() * 20 + 12) + 'px';
+    el.style.animationDuration = (Math.random() * 8 + 9) + 's';
+    floatsBg.appendChild(el);
+    setTimeout(function() { el.remove(); }, 18000);
+  }
+
+  setInterval(spawnFloat, 500);
+  for (var i = 0; i < 15; i++) {
+    setTimeout(spawnFloat, i * 200);
+  }
+
+  // ===== Counter — counts up forever =====
+  // Relationship start time — counts up forever from this moment.
+// Acum afișează 7 zile, iar la următoarea oră 00:00 devine 8 zile
+ var startTime = new Date();
+ startTime.setHours(0, 0, 0, 0);      // azi la 00:00
+ startTime.setDate(startTime.getDate() - 7); // cu 7 zile în urmă
+
+  var prevSec = -1;
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function bump(el) {
+    el.classList.remove('bump');
+    void el.offsetWidth;
+    el.classList.add('bump');
+    setTimeout(function() { el.classList.remove('bump'); }, 200);
+  }
+
+  function updateCounter() {
+    var now = new Date();
+    var elapsed = now - startTime;
+    if (elapsed < 0) return;
+
+    var totalSeconds = Math.floor(elapsed / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    var hours = Math.floor((totalSeconds % 86400) / 3600);
+    var minutes = Math.floor((totalSeconds % 3600) / 60);
+    var seconds = totalSeconds % 60;
+
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = pad(hours);
+    document.getElementById('minutes').textContent = pad(minutes);
+
+    var secEl = document.getElementById('seconds');
+    secEl.textContent = pad(seconds);
+
+    // Bump animation on each second change
+    if (seconds !== prevSec) {
+      bump(secEl);
+      prevSec = seconds;
+    }
+
+    // Update "noi în cifre" zile
+    var cifraZileEl = document.getElementById('cifraZile');
+    if (cifraZileEl) cifraZileEl.textContent = days;
+  }
+
+  setInterval(updateCounter, 1000);
+  updateCounter();
+
+  // ===== Love note toggle =====
+  var loveNoteBtn = document.getElementById('loveNoteBtn');
+  var loveNote = document.getElementById('loveNote');
+  var noteOpen = false;
+
+  loveNoteBtn.addEventListener('click', function() {
+    noteOpen = !noteOpen;
+    loveNote.classList.toggle('show', noteOpen);
+    loveNoteBtn.textContent = noteOpen ? 'Închide 💗' : 'Apasă aici 💌';
+  });
+
+  // ===== Scroll reveal =====
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+
+})();
+</script>
+
+</body>
+</html>
